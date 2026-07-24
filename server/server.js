@@ -848,13 +848,13 @@ Conversation History:
   }
 });
 
-const distPath = path.join(__dirname, "../client/dist");
+// const distPath = path.join(__dirname, "../client/dist");
 
-app.use(express.static(distPath));
+// app.use(express.static(distPath));
 
-app.use((req, res) => {
-  res.sendFile(path.join(distPath, "index.html"));
-});
+// app.use((req, res) => {
+//   res.sendFile(path.join(distPath, "index.html"));
+// });
     app.listen(3000, () => {
         console.log("Server is running on port 3000");
     });

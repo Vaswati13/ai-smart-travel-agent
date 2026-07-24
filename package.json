@@ -1,0 +1,12 @@
+{
+  "name": "smart-ai-travel-agent",
+  "private": true,
+  "scripts": {
+    "client": "npm --prefix client run dev",
+    "server": "node server/server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+} 

@@ -27,7 +27,7 @@ function Dashboard() {
       try {
         setLoading(true);
 
-        const response = await fetch("http://localhost:3000/plan-trip", {
+        const response = await fetch("https://ai-smart-travel-agent-3.onrender.com/plan-trip", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -46,7 +46,7 @@ function EmergencyCard() {
     async function fetchNearby() {
       setLoadingNearby(true);
       try {
-        const res = await fetch(`http://localhost:3000/nearby-services?lat=${lat}&lon=${lon}&type=${nearbyType}`);
+        const res = await fetch(`https://ai-smart-travel-agent-3.onrender.com/nearby-services?lat=${lat}&lon=${lon}&type=${nearbyType}`);
         const data = await res.json();
         setNearbyItems(data);
       } catch (err) {

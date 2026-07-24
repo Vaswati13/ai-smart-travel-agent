@@ -35,14 +35,14 @@ function WeatherCard({ city, days }) {
     async function fetchWeatherData() {
       try {
         // Fetch current weather
-        const currentRes = await fetch(`http://localhost:3000/weather/${city}`);
+        const currentRes = await fetch(`https://ai-smart-travel-agent-3.onrender.com/weather/${city}`);
         const currentData = await currentRes.json();
         if (currentRes.ok) {
           setWeather(currentData);
         }
 
         // Fetch forecast
-        const forecastRes = await fetch(`http://localhost:3000/weather-forecast/${city}`);
+        const forecastRes = await fetch(`https://ai-smart-travel-agent-3.onrender.com/weather-forecast/${city}`);
         const forecastData = await forecastRes.json();
         
         if (forecastRes.ok && forecastData && forecastData.list) {

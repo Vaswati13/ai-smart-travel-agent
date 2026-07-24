@@ -37,7 +37,7 @@ function ChatBot() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3000/chat", {
+      const response = await fetch("https://ai-smart-travel-agent-3.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

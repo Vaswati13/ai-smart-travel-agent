@@ -45,7 +45,7 @@ function HotelsSection() {
     async function fetchNearbyHotels() {
       setLoadingNearby(true);
       try {
-        const res = await fetch(`http://localhost:3000/nearby-services?lat=${lat}&lon=${lon}&type=hotel`);
+        const res = await fetch(`https://ai-smart-travel-agent-3.onrender.com/nearby-services?lat=${lat}&lon=${lon}&type=hotel`);
         const data = await res.json();
         setNearbyHotels(data);
       } catch (err) {

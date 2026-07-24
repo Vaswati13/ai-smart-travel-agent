@@ -12,7 +12,7 @@ function MapCard() {
 
     async function fetchLocation() {
       const res = await fetch(
-        `http://localhost:3000/location/${tripData.destination}`
+        `https://ai-smart-travel-agent-3.onrender.com/location/${tripData.destination}`
       );
 
       const data = await res.json();

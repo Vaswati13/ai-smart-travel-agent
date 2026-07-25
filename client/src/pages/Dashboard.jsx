@@ -16,7 +16,6 @@ import RestaurantsSection from "../sections/RestaurantsSection";
 
 function Dashboard() {
   const { tripData, setTripPlan } = useContext(TripContext);
-
   const [activeSection, setActiveSection] = useState("dashboard");
   const [loading, setLoading] = useState(true);
   const [aiResult, setAiResult] = useState("");
@@ -40,6 +39,11 @@ function Dashboard() {
         if (response.ok) {
   setAiResult(data.result || "");
   setTripPlan(data.structured || {});
+
+  localStorage.setItem(
+    "tripPlan",
+    JSON.stringify(data.structured || {})
+  );
 } else {
   setAiResult(data.error || "Something went wrong");
   setTripPlan({});
